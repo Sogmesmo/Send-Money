@@ -9,23 +9,23 @@ export class UsuariosComponent implements OnInit {
   usuarios: any[] = [
   {
     "id": "1",
-    "nome": "Geice",
-    "idade": 25
+    "nome": "Geice Gomes",
+    "user": '@Geice'
   },
   {
     "id": "2",
-    "nome": "debora",
-    "idade": 23
+    "nome": "Debora Souto",
+    "user": '@Debora'
   },
   {
     "id": "3",
-    "nome": "Marilda",
-    "idade": 55
+    "nome": "Marilda Silva",
+    "user": '@Marilda'
   },
   {
     "id": "4",
-    "nome": "Jane",
-    "idade": 30
+    "nome": "Jane Castro",
+    "user": '@Jane'
   }
   ]
   constructor() { }
