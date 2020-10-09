@@ -7,7 +7,7 @@
     height: 568px;
   }
 .titlemodal{
-  background: #c2185b;;
+  background: #c2185b;
   color: white;
   height: 40px;
   padding: 20px;
@@ -47,11 +47,10 @@
   font-size: 25px;
   border-radius: 5px;
   width: 400px;
+  margin: 20px;
 
 }
 button {
 margin-left: 35%;
 width: 100px;
-font-size: 25px; 
-font-weight: bold;
 }

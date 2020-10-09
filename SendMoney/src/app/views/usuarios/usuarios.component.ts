@@ -17,11 +17,10 @@ export class UsuariosComponent implements OnInit {
   constructor( 
     private service: UsuariosService,
     private router: Router,
-    public displays : UsuariosService) { }
+    ) { }
     public usuarios = [];
         
 
-    mudarValor: boolean = true
     
 
  
@@ -31,9 +30,8 @@ export class UsuariosComponent implements OnInit {
       console.log(this.usuarios);  
     })
   }
-  valorModal = true 
-
   
+
   openModal(): void {
    this.router.navigate(['/modal'])
   }
