@@ -1,36 +1,40 @@
+import { Router } from '@angular/router';
+import { UsuariosService } from './usuarios.service';
 import { Component, OnInit } from '@angular/core';
+
+
+ 
 
 @Component({
   selector: 'app-usuarios',
   templateUrl: './usuarios.component.html',
-  styleUrls: ['./usuarios.component.css']
+  styleUrls: ['./usuarios.component.scss']
 })
+
 export class UsuariosComponent implements OnInit {
-  usuarios: any[] = [
-  {
-    "id": "1",
-    "nome": "Geice Gomes",
-    "user": '@Geice'
-  },
-  {
-    "id": "2",
-    "nome": "Debora Souto",
-    "user": '@Debora'
-  },
-  {
-    "id": "3",
-    "nome": "Marilda Silva",
-    "user": '@Marilda'
-  },
-  {
-    "id": "4",
-    "nome": "Jane Castro",
-    "user": '@Jane'
-  }
-  ]
-  constructor() { }
 
+  
+  constructor( 
+    private service: UsuariosService,
+    private router: Router,
+    public displays : UsuariosService) { }
+    public usuarios = [];
+        
+
+    mudarValor: boolean = true
+    
+
+ 
   ngOnInit(): void {
+     this.service.getDados().subscribe((data) => {
+       this.usuarios = Array.from(Object.keys(data) , k=>data[k]);
+      console.log(this.usuarios);  
+    })
   }
+  valorModal = true 
 
+  
+  openModal(): void {
+   this.router.navigate(['/modal'])
+  }
 }

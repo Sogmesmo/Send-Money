@@ -14,6 +14,9 @@ import { UsuariosComponent } from './views/usuarios/usuarios.component';
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { HomeComponent } from './views/home/home.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { UsuariosService } from './views/usuarios/usuarios.service';
+import { ModalComponent } from './views/modal/modal/modal.component'
 
 
 @NgModule({
@@ -23,7 +26,8 @@ import { HomeComponent } from './views/home/home.component';
     FooterComponent,
     NavComponent,
     UsuariosComponent,
-    HomeComponent
+    HomeComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
@@ -33,9 +37,10 @@ import { HomeComponent } from './views/home/home.component';
     MatSidenavModule,
     MatListModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [UsuariosService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

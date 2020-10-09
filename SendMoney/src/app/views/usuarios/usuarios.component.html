@@ -1,23 +1,23 @@
 <div class="pagina">
-<div class="containerTweets">
-    <div class="row" class="container">
-       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
-           <table class=" containerTable " >              
-               <tbody >  
-                  <tr class="table" *ngFor = "let usuarios of usuarios">
-                    <img class="imagem" src="assets/img/Jessie-J.png" alt="Imagem" /> 
-                    <div class="containerTextos">
-                        <td>Nome : {{usuarios.nome}}</td>
-                        <td>ID : {{usuarios.id}}</td>
-                        <td>Usernam : {{usuarios.user}}</td>
-                    </div>  
-                   <td><button mat-raised-button (click)="navigatToCartoes()">
-                    PAGAR 
-                </button></td>
-                 </tr>
-               </tbody>
-           </table>
-       </div>
+    <div class="containerTweets">
+        <div class="row" class="container">
+           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+               <table class=" containerTable " >              
+                   <tbody >  
+                      <tr class="table" *ngFor = "let usuarios of usuarios, let i =index">
+                        <img ngClass='userimg' src={{usuarios.img}} alt="Imagem Usuário" />  
+                        <div class="containerTextos">
+                            <td>Nome : {{usuarios.name}}</td>
+                            <td>ID : {{usuarios.id}}</td>
+                            <td>Usernam : {{usuarios.username}}</td>
+                        </div>  
+                       <td><button mat-raised-button (click)= "openModal()" color="primary">
+                        PAGAR 
+                    </button></td>
+                     </tr>
+                   </tbody>
+               </table>
+           </div>
+        </div>
+     </div>
     </div>
- </div>
-</div>

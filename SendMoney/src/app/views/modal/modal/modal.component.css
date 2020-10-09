@@ -1,0 +1,57 @@
+
+.pagina { 
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 568px;
+  }
+.titlemodal{
+  background: #c2185b;;
+  color: white;
+  height: 40px;
+  padding: 20px;
+  margin-top: 0; 
+  text-align: initial;
+  align-items: center;
+}
+
+
+
+.Containermodal {
+        border: solid 1px #FFFFFF24;
+         width: 50vW; 
+        height: auto;
+        margin: 10px 20vw 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        border-radius: 1.8rem;
+        max-width: 92.5rem;
+        float: left;
+    }
+
+    .ContainerForm {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        height: 20vw;
+    }
+     .form {
+         display: grid;
+         align-items: center;
+         justify-content: center;
+     }
+   
+.valormodal{
+  font-size: 25px;
+  border-radius: 5px;
+  width: 400px;
+
+}
+button {
+margin-left: 35%;
+width: 100px;
+font-size: 25px; 
+font-weight: bold;
+}
