@@ -16,7 +16,14 @@
   align-items: center;
 }
 
-
+.imagem img {
+  padding: 20px;
+  border-radius: 50%;
+  width: 7rem;
+  height: 7rem;
+  float: left;
+  object-fit: cover;  
+}
 
 .Containermodal {
         border: solid 1px #FFFFFF24;

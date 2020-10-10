@@ -1,5 +1,6 @@
-
+import { UsuariosService } from './../../usuarios/usuarios.service';
 import { Component, OnInit } from '@angular/core';
+
 
 
 
@@ -9,12 +10,36 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {  
+
+  /*usuarioselecionado: any;*/
+  dadoscard: any;
+
+  cards:any = [
+    // valid card
+    {
+      card_number: '1111111111111111',
+      cvv: 789,
+      expiry_date: '01/18',
+    },
+    // invalid card
+    {
+      card_number: '4111111111111234',
+      cvv: 123,
+      expiry_date: '01/20',
+    },
+  ];
+
+  constructor(
+     private service: UsuariosService) {  }
  
-  constructor() {  }
+  ngOnInit(): void {   
+    /*this.usuarioselecionado = this.display.getUsuarioSelecionado()
+    console.log(this.usuarioselecionado)*/
+  }
 
-
-
-  ngOnInit(): void {    
-   
+  sendpay(){
+    console.log(this.dadoscard)
+    this.service.addpay(this.dadoscard).subscribe(() => { this.service.showMessage("O pagamento foi concluido com sucesso!")
+  });  
   }
 }

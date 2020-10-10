@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +17,7 @@ import { HomeComponent } from './views/home/home.component';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { UsuariosService } from './views/usuarios/usuarios.service';
 import { ModalComponent } from './views/modal/modal/modal.component'
+import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -38,9 +39,14 @@ import { ModalComponent } from './views/modal/modal/modal.component'
     MatListModule,
     MatCardModule,
     MatButtonModule,
-    HttpClientModule
+   HttpClientModule, 
+   MatSnackBarModule
+
   ],
-  providers: [UsuariosService],
+  providers: [UsuariosService,{
+    provide: LOCALE_ID,
+    useValue: 'pt-BR'
+  }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

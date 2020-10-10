@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
-import { UsuariosService } from './usuarios.service';
+import { UsuariosService} from './usuarios.service';
 import { Component, OnInit } from '@angular/core';
+
 
 
  
@@ -13,15 +14,13 @@ import { Component, OnInit } from '@angular/core';
 
 export class UsuariosComponent implements OnInit {
 
+
   
   constructor( 
     private service: UsuariosService,
     private router: Router,
     ) { }
     public usuarios = [];
-        
-
-    
 
  
   ngOnInit(): void {
@@ -30,9 +29,13 @@ export class UsuariosComponent implements OnInit {
       console.log(this.usuarios);  
     })
   }
-  
+ 
 
-  openModal(): void {
+  openModal(): void { 
    this.router.navigate(['/modal'])
   }
+
+  
+
 }
+
