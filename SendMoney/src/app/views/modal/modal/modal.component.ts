@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { UsuariosService } from './../../usuarios/usuarios.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -30,7 +31,8 @@ export class ModalComponent implements OnInit {
   ];
 
   constructor(
-     private service: UsuariosService) {  }
+     private service: UsuariosService,
+     private router: Router) {  }
  
   ngOnInit(): void {   
     /*this.usuarioselecionado = this.display.getUsuarioSelecionado()
@@ -40,6 +42,7 @@ export class ModalComponent implements OnInit {
   sendpay(){
     console.log(this.dadoscard)
     this.service.addpay(this.dadoscard).subscribe(() => { this.service.showMessage("O pagamento foi concluido com sucesso!")
+    this.router.navigate(['/usuarios'])
   });  
   }
 }
